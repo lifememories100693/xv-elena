@@ -51,7 +51,7 @@ window.evento = {
 
     horaRecepcion: "5:00 PM",
 
-    telefono: "5219562243623",
+    telefono: "5219652243623",
 
     musica: "music/cancion.mp3",
 
