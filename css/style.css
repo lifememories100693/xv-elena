@@ -216,7 +216,7 @@ body{
    CONTADOR — CELULAR
 ========================================= */
 
-@media (max-width: 600px) {
+ {
 
     #contador {
         padding: 70px 15px;
@@ -3830,5 +3830,12 @@ margin: 0;
     #cierre .firma-creador img {
         width: 85px;
         height: auto;
+    }
+}
+
+/* BAJAR TEXTOS DE PORTADA EN CELULAR */
+@media (max-width: 600px) {
+    .hero-contenido {
+        top: 48%;
     }
 }
