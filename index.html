@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pola Invitation</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<section class="hero">
+
+    <!-- CARRUSEL -->
+    <div class="hero-slider">
+
+        <div class="hero-slide active"
+             style="background-image: url('portada/portada1.jpg');">
+        </div>
+
+        <div class="hero-slide"
+             style="background-image: url('portada/portada2.jpg');">
+        </div>
+
+        <div class="hero-slide"
+             style="background-image: url('portada/portada3.jpg');">
+        </div>
+
+    </div>
+
+    <!-- CONTENIDO DE LA PORTADA -->
+    <div class="hero-contenido">
+
+        <h1 id="tipoEvento"></h1>
+
+        <h2 id="nombreEvento"></h2>
+
+        <p id="fraseEvento"></p>
+
+        <a href="#contador" id="btnInvitacion">
+            Ver invitación
+        </a>
+
+    </div>
+
+</section>
+
+<section id="contador">
+
+    <!-- FLORES DECORATIVAS -->
+    <img src="assets/florales/flor1.png"
+         class="flor-decorativa flor-superior"
+         alt="">
+
+    <img src="assets/florales/flor2.png"
+         class="flor-decorativa flor-inferior"
+         alt="">
+
+    <div class="fecha-decorada">
+        <span></span>
+        <p>26 DE DICIEMBRE DE 2026</p>
+        <span></span>
+    </div>
+
+    <h2>Faltan</h2>
+
+    <div class="contador">
+
+        <div class="tiempo">
+            <span id="dias">00</span>
+            <small>Días</small>
+        </div>
+
+        <div class="tiempo">
+            <span id="horas">00</span>
+            <small>Horas</small>
+        </div>
+
+        <div class="tiempo">
+            <span id="minutos">00</span>
+            <small>Minutos</small>
+        </div>
+
+        <div class="tiempo">
+            <span id="segundos">00</span>
+            <small>Segundos</small>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="recepcion" data-aos="fade-left">
+
+    <div class="titulo-seccion">
+
+        <span>CELEBRAMOS</span>
+
+        <h2>La Recepción</h2>
+
+    </div>
+
+    <div class="card-evento">
+
+        <div class="icono-evento">
+            <i class="fa-solid fa-champagne-glasses"></i>
+        </div>
+
+        <h3 id="salonEvento"></h3>
+
+<p id="horaRecepcion"></p>
+
+<p>Será un honor contar con su presencia.</p>
+
+        <a href="#" class="btn-evento" id="btnMapaRecepcion">
+    Cómo llegar
+</a>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     MI HISTORIA
+========================================= -->
+
+<section id="historia" data-aos="fade-up">
+
+    <div class="titulo-seccion">
+
+        <span>QUINCE AÑOS DE RECUERDOS</span>
+
+        <h2>Mi historia</h2>
+
+        <p>
+            Un viaje lleno de momentos, sonrisas y sueños...
+        </p>
+
+    </div>
+
+    <div class="historia-contenedor">
+
+        <!-- NACIMIENTO -->
+
+        <div class="historia-item">
+
+            <div class="historia-imagen">
+
+                <div class="historia-galeria" id="galeriaNacimiento"></div>
+
+            </div>
+
+            <div class="historia-texto">
+
+                <span>EL COMIENZO</span>
+
+                <h3 id="tituloNacimiento">Mi nacimiento</h3>
+
+                <p id="textoNacimiento">
+                    Un comienzo lleno de esperanza.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- INFANCIA -->
+
+        <div class="historia-item historia-reversa">
+
+            <div class="historia-imagen">
+
+                <div class="historia-galeria" id="galeriaInfancia"></div>
+
+            </div>
+
+            <div class="historia-texto">
+
+                <span>RECUERDOS</span>
+
+                <h3 id="tituloInfancia">Mi infancia</h3>
+
+                <p id="textoInfancia">
+                    Los primeros capítulos de mi historia.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- XV AÑOS -->
+
+        <div class="historia-item">
+
+            <div class="historia-imagen">
+
+                <img
+                    src="historia/xv.jpg"
+                    alt="Elena en sus XV años"
+                >
+
+            </div>
+
+            <div class="historia-texto">
+
+                <span>HOY</span>
+
+                <h3>Mis XV años</h3>
+
+                <p>
+                    Hoy celebro una etapa muy especial de mi vida,
+                    agradecida por cada momento vivido y emocionada
+                    por todos los sueños que están por comenzar.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FINAL -->
+
+        <div class="historia-final">
+
+            <span>UN NUEVO CAPÍTULO</span>
+
+            <h3>Y mi historia continúa...</h3>
+
+            <p>
+                Gracias por acompañarme y ser parte de este
+                momento tan importante de mi vida.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     PADRES Y PADRINOS
+========================================= -->
+
+<section id="papas" data-aos="fade-up">
+
+    <!-- FLORES DECORATIVAS -->
+    <img src="assets/florales/flor1.png"
+         class="flor-decorativa flor-superior"
+         alt="">
+
+    <img src="assets/florales/flor2.png"
+         class="flor-decorativa flor-inferior"
+         alt="">
+
+    <div class="titulo-seccion">
+
+        <span>EN ESTE DÍA TAN ESPECIAL</span>
+        <h2>Con amor</h2>
+
+    </div>
+
+    <div class="familia-card">
+
+        <div class="familia-bloque">
+
+            <span class="familia-subtitulo">MIS PADRES</span>
+
+            <h3>Sr. Belizario López Gómez</h3>
+            <h3>Sra. Madiley Pérez Cordero</h3>
+
+            <p>
+                Gracias por ser mi guía, mi fortaleza y por acompañarme
+                con amor en cada etapa de mi vida.
+            </p>
+
+        </div>
+
+        <div class="familia-separador">
+            ✦
+        </div>
+
+    </div>
+
+    <div class="titulo-seccion">
+
+        <h2>Mis padrinos</h2>
+
+        <div id="listaPadrinos"></div>
+
+    </div>
+
+    <div id="contenedorPadrinos" class="contenedor-padrinos"></div>
+
+</section>
+
+<!-- =========================================
+     UN DETALLE PARA ELENA
+========================================= -->
+
+<section id="regalos" data-aos="fade-up">
+
+    <div class="titulo-seccion">
+
+        <span>UN DETALLE ESPECIAL</span>
+
+        <h2>Un detalle para Elena</h2>
+
+    </div>
+
+    <div class="regalos-card">
+
+        <div class="regalos-icono">
+            <i class="fa-solid fa-gift"></i>
+        </div>
+
+        <p>
+            Tu presencia es el regalo más especial en este día.
+        </p>
+
+        <p>
+            Si deseas tener un detalle con Elena, agradeceremos
+            mucho tus buenos deseos y, de manera opcional, podrás
+            acompañarlos con un detalle en un sobre.
+        </p>
+
+        <div class="regalos-separador">
+            ✦
+        </div>
+
+        <p class="regalos-final">
+            Con cariño, gracias por ser parte de este momento
+            tan importante.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="agenda" data-aos="fade-up">
+
+    <!-- FLORES DECORATIVAS -->
+    <img src="assets/florales/flor1.png"
+         class="flor-decorativa flor-superior"
+         alt="">
+
+    <img src="assets/florales/flor2.png"
+         class="flor-decorativa flor-inferior"
+         alt="">
+
+    <div class="titulo-seccion">
+
+        <span>PROGRAMA</span>
+
+        <h2>Agenda del Evento</h2>
+
+    </div>
+
+    <div class="timeline" id="timeline">
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     GALERÍA
+========================================= -->
+
+<section id="galeria" data-aos="zoom-in">
+
+    <div class="titulo-seccion">
+
+        <span>MOMENTOS ESPECIALES</span>
+        <h2>Galería</h2>
+
+    </div>
+
+    <div class="grid-galeria" id="gridGaleria"></div>
+
+</section>
+
+<!-- =========================================
+     CONFIRMACIÓN DE ASISTENCIA
+========================================= -->
+
+<section id="confirmacion" data-aos="fade-up">
+
+    <!-- FLORES DECORATIVAS -->
+    <img src="assets/florales/flor1.png"
+         class="flor-decorativa flor-superior"
+         alt="">
+
+    <img src="assets/florales/flor2.png"
+         class="flor-decorativa flor-inferior"
+         alt="">
+
+    <div class="titulo-seccion">
+
+        <span>CONFIRMACIÓN</span>
+
+        <h2>¿Nos acompañarás?</h2>
+
+    </div>
+
+    <div class="card-confirmacion">
+
+        <p>
+            Nos encantará compartir este momento contigo.
+        </p>
+
+        <input
+            type="text"
+            id="nombreInvitado"
+            placeholder="Escribe tu nombre"
+        >
+
+        <label>Adultos</label>
+
+        <div class="contador-personas">
+
+            <button type="button" id="menosAdultos">−</button>
+
+            <span id="adultos">1</span>
+
+            <button type="button" id="masAdultos">+</button>
+
+        </div>
+
+        <label>Niños</label>
+
+        <div class="contador-personas">
+
+            <button type="button" id="menosNinos">−</button>
+
+            <span id="ninos">0</span>
+
+            <button type="button" id="masNinos">+</button>
+
+        </div>
+
+        <button id="confirmarWhatsapp">
+            Confirmar asistencia
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     CIERRE DE LA INVITACIÓN
+========================================= -->
+
+<section id="cierre" data-aos="fade-up">
+
+    <div class="cierre-contenido">
+
+       <img id="fotoDespedida" src="" alt="Elena"> 
+
+        <span class="cierre-subtitulo">
+            GRACIAS POR ACOMPAÑARME
+        </span>
+
+        <div class="cierre-adorno">
+            ✦
+        </div>
+
+        <h2>
+            Un momento para recordar,
+            una historia para celebrar.
+        </h2>
+
+        <p>
+            Gracias por compartir conmigo este día tan especial
+            y por formar parte de los recuerdos que llevaré
+            siempre en mi corazón.
+        </p>
+
+        <div class="cierre-linea"></div>
+
+        <span class="cierre-firma">
+            Con cariño, Elena
+        </span>
+
+        <h3 id="nombreCierre">
+            
+        </h3>
+
+    </div>
+
+    <div class="firma-creador">
+        <img src="logo/pola-life-memories.png" alt="Pola Life Memories">
+    </div>
+
+</section>
+
+<div class="menu-flotante">
+
+    <button class="fab" id="musica">
+        <i class="fa-solid fa-music"></i>
+    </button>
+
+    <button class="fab" id="ubicacion">
+        <i class="fa-solid fa-location-dot"></i>
+    </button>
+
+<button class="fab" id="whatsapp">
+    <i class="fa-brands fa-whatsapp"></i>
+</button>
+
+</div>
+
+<audio id="musicaFondo" loop>
+    <source src="music/cancion.mp3" type="audio/mpeg">
+</audio>
+
+<div id="lightbox">
+
+    <span id="cerrar">&times;</span>
+
+    <img id="imagenGrande">
+
+</div>
+
+<script src="js/config.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
+
