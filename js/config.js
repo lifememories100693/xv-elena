@@ -51,7 +51,7 @@ window.evento = {
 
     horaRecepcion: "5:00 PM",
 
-    telefono: "5219652243623",
+    telefono: "5219612135882",
 
     musica: "music/cancion.mp3",
 
@@ -59,7 +59,7 @@ window.evento = {
 
         {
             titulo: "Padrinos de vestido",
-            nombres: "Oscar Torres Gutiérrez, Rubén Vicente Juan Carlos José Solís, Alember Molina Hernández y Gloribel Hernández"
+            nombres: "Oscar Torres Gutiérrez, José Manuel Vergara Becerra, Juan Carlos José Solís, Alember Molina Hernández y Gloribel Hernández"
         }
 
     ],
