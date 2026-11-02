@@ -195,7 +195,7 @@ document.getElementById("confirmarWhatsapp").onclick = function() {
 
     }
 
-    const telefono = "5219651226088";
+    const telefono = "5219612135882";
 
     const mensaje =
 
