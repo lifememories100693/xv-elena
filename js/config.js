@@ -49,7 +49,7 @@ window.evento = {
 
     mapaRecepcion: "https://maps.app.goo.gl/Kx8nyLzdhUhHKvVw8",
 
-    horaRecepcion: "5:00 PM",
+    horaRecepcion: "4:00 PM",
 
     telefono: "5219612135882",
 
