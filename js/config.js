@@ -43,7 +43,7 @@ window.evento = {
 
     fecha: "26 de diciembre de 2026",
 
-    hora: "5:00 PM",
+    hora: "4:00 PM",
 
     salon: 'Salón "La Victoria", Colonia Cuauhtémoc, Villaflores, Chiapas',
 
@@ -67,49 +67,49 @@ window.evento = {
     agenda: [
 
         {
-            hora: "4:45 PM",
+            hora: "3:45 PM",
             titulo: "Salida de la Quinceañera",
             descripcion: "Casa del Sr. Esvel Gutiérrez"
         },
 
         {
-            hora: "5:00 PM",
+            hora: "4:00 PM",
             titulo: "Recepción",
             descripcion: 'Salón "La Victoria"'
         },
 
         {
-            hora: "5:20 PM",
+            hora: "4:30 PM",
             titulo: "Sesión de Fotografías",
             descripcion: "Con familiares e invitados."
         },
 
         {
-            hora: "5:30 PM",
+            hora: "5:00 PM",
             titulo: "Presentación y Vals",
             descripcion: ""
         },
 
         {
-            hora: "6:00 PM",
+            hora: "5:30 PM",
             titulo: "Cena",
             descripcion: ""
         },
 
         {
-            hora: "7:00 PM",
+            hora: "6:00 PM",
             titulo: "Ceremonia de Brindis",
             descripcion: ""
         },
 
         {
-            hora: "7:30 PM",
+            hora: "6:30 PM",
             titulo: "Regalo Sorpresa",
             descripcion: ""
         },
 
         {
-            hora: "8:00 PM",
+            hora: "7:00 PM",
             titulo: "Baile",
             descripcion: ""
         }
