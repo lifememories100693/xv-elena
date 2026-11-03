@@ -3839,3 +3839,74 @@ margin: 0;
         top: 48%;
     }
 }
+
+/* BOTÓN DE MÚSICA EN PORTADA */
+
+.boton-musica-portada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin: 20px auto;
+    padding: 15px 28px;
+    background: #244C3A;
+    color: #D4AF62;
+    border: 1.5px solid #C6A04A;
+    border-radius: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.20);
+    transition: all 0.3s ease;
+}
+
+.boton-musica-portada i {
+    font-size: 38px;
+    animation: pulsoMusica 1.8s infinite;
+}
+
+.boton-musica-portada:hover {
+    background: #183629;
+    transform: scale(1.05);
+}
+
+@keyframes pulsoMusica {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+.boton-musica-portada.reproduciendo {
+    background: #C6A04A;
+    color: #183629;
+}
+
+/* BOTÓN DE MÚSICA COMPACTO EN CELULARES */
+
+@media (max-width: 600px) {
+
+    .boton-musica-portada {
+        margin: 10px auto;
+        padding: 6px 13px;
+max-width: 180px;
+font-size: 8px;
+gap: 3px;
+        font-size: 9px;
+    }
+
+    .boton-musica-portada i {
+    font-size: 24px;
+}
+
+    .hero-contenido {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+}
