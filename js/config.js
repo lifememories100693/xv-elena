@@ -58,12 +58,74 @@ window.evento = {
 
     padrinos: [
 
-        {
-            titulo: "Padrinos de vestido",
-            nombres: "Oscar Torres Gutiérrez, José Manuel Vergara Becerra, Juan Carlos José Solís, Alember Molina Hernández y Gloribel Hernández"
-        }
+    {
+        categoria: "vestido",
+        titulo: "Padrinos de vestido",
+        nombres: "Oscar Torres Gutiérrez, José Manuel Vergara Becerra, Juan Carlos José Solís, Alember Molina Hernández y Gloribel Hernández"
+    },
 
-    ],
+    {
+        categoria: "musica",
+        titulo: "Padrinos de música",
+        nombres: "Nombres de los padrinos"
+    },
+
+    {
+        categoria: "pastel",
+        titulo: "Padrinos de pastel",
+        nombres: "Nombres de los padrinos"
+    },
+
+    {
+        categoria: "arreglo-salon",
+        titulo: "Padrinos de arreglo de salón",
+        nombres: "Nombres de los padrinos"
+    },
+
+    {
+        categoria: "centro-mesa",
+        titulo: "Padrinos de centro de mesa",
+        nombres: "Nombres de los padrinos"
+    },
+
+
+    {
+        categoria: " Regalo sorpresa",
+        titulo: "Padrinos de  Regalo sorpresa",
+        nombres: "Nombres de los padrinos"
+    },
+
+    {
+        categoria: "muneca",
+        titulo: "Padrinos de muñeca",
+        nombres: "Nombres de los padrinos"
+    },
+
+    {
+        categoria: "brindis",
+        titulo: "Padrinos de brindis",
+        nombres: "Nombres de los padrinos"
+    },
+
+    {
+        categoria: "fotografia",
+        titulo: "Padrinos de fotografía",
+        nombres: "Nombres de los padrinos"
+    },
+
+    {
+        categoria: "zapatillas",
+        titulo: "Padrinos de zapatillas",
+        nombres: "Nombres de los padrinos"
+    },
+
+    {
+        categoria: "album",
+        titulo: "Padrinos de álbum",
+        nombres: "Nombres de los padrinos"
+    }
+
+],
 
     agenda: [
 

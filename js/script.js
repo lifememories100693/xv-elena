@@ -516,7 +516,6 @@ if (evento.historia.infancia) {
 
 }
 
-
 /*=========================================
 PADRINOS Y NOMBRAMIENTOS
 =========================================*/
@@ -524,9 +523,29 @@ PADRINOS Y NOMBRAMIENTOS
 const listaPadrinos =
     document.getElementById("listaPadrinos");
 
-if (listaPadrinos && evento.padrinos) {
+const seccionSoloPadrinos =
+    document.getElementById("seccionSoloPadrinos");
 
-    evento.padrinos.forEach(function(padrino) {
+const parametros = new URLSearchParams(window.location.search);
+
+const categoriaSeleccionada = parametros.get("padrinos");
+const tipoInvitacion = parametros.get("tipo");
+
+if (tipoInvitacion === "invitados") {
+
+    if (seccionSoloPadrinos) {
+        seccionSoloPadrinos.style.display = "none";
+    }
+
+} else if (listaPadrinos && evento.padrinos) {
+
+    const padrinosMostrar = categoriaSeleccionada
+        ? evento.padrinos.filter(function(padrino) {
+            return padrino.categoria === categoriaSeleccionada;
+        })
+        : evento.padrinos;
+
+    padrinosMostrar.forEach(function(padrino) {
 
         listaPadrinos.innerHTML += `
 
@@ -551,7 +570,6 @@ if (listaPadrinos && evento.padrinos) {
     });
 
 }
-
 
 /*=========================================
 ANIMACIONES AOS
