@@ -67,62 +67,61 @@ window.evento = {
     {
         categoria: "musica",
         titulo: "Padrinos de música",
-        nombres: "Nombres de los padrinos"
+        nombres: "Hugo Alberto Mendoza, Otoniel López Gómez, Jorge López Gómez, Eliú López Gómez y Fabiola López"
     },
 
     {
         categoria: "pastel",
         titulo: "Padrinos de pastel",
-        nombres: "Nombres de los padrinos"
+        nombres: "Bernabé José, Luis Alberto Pérez, Francisco Toalá, David Pérez y Juan Carlos Flores"
     },
 
     {
         categoria: "arreglo-salon",
         titulo: "Padrinos de arreglo de salón",
-        nombres: "Nombres de los padrinos"
+        nombres: "Sayuri Jamai Pérez, Aner Cervantes, Luis Alfredo Hernández, Isaías Hidalgo y Ofelia Solís"
     },
 
     {
         categoria: "centro-mesa",
         titulo: "Padrinos de centro de mesa",
-        nombres: "Nombres de los padrinos"
+        nombres: "Merari Pérez, Saúl Hernández, Héctor Manuel Hernández y Marcos Manuel Díaz Hernández"
     },
 
-
     {
-        categoria: " Regalo sorpresa",
-        titulo: "Padrinos de  Regalo sorpresa",
-        nombres: "Nombres de los padrinos"
+        categoria: "regalo-sorpresa",
+        titulo: "Padrinos de regalo sorpresa",
+        nombres: "Erick Gómez y Marco Antonio Torres"
     },
 
     {
         categoria: "muneca",
         titulo: "Padrinos de muñeca",
-        nombres: "Nombres de los padrinos"
+        nombres: "Benito Rincón Espinoza"
     },
 
     {
         categoria: "brindis",
         titulo: "Padrinos de brindis",
-        nombres: "Nombres de los padrinos"
+        nombres: "Manuel José Solís y Fredi Urbina"
     },
 
     {
         categoria: "fotografia",
         titulo: "Padrinos de fotografía",
-        nombres: "Nombres de los padrinos"
+        nombres: "Estela Constantino, Francisco Javier Velasco Macal y José Ignacio Vásquez"
     },
 
     {
         categoria: "zapatillas",
         titulo: "Padrinos de zapatillas",
-        nombres: "Nombres de los padrinos"
+        nombres: "Blanca Cecilia Serrano"
     },
 
     {
         categoria: "album",
         titulo: "Padrinos de álbum",
-        nombres: "Nombres de los padrinos"
+        nombres: "Enedid Gumeta"
     }
 
 ],
