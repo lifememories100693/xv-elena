@@ -131,7 +131,7 @@ window.evento = {
         {
             hora: "3:45 PM",
             titulo: "Salida de la Quinceañera",
-            descripcion: "Casa del Sr. Esvel Gutiérrez"
+            descripcion: "Casa del Sra. María Delma Ruiz Sesma"
         },
 
         {
