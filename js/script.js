@@ -1,30 +1,15 @@
+document.getElementById("tipoEvento").textContent = evento.tipo;
 
-/*=========================================
-DATOS GENERALES
-=========================================*/
+document.getElementById("nombreEvento").textContent = evento.nombre;
 
-function colocarTexto(id, texto) {
-    const elemento = document.getElementById(id);
-    if (elemento) elemento.textContent = texto ?? "";
-}
+document.getElementById("fotoDespedida").src = evento.fotoDespedida;
 
-colocarTexto("tipoEvento", evento.tipo);
-colocarTexto("nombreEvento", evento.nombre);
-colocarTexto("nombresCompletos", evento.nombreNovios);
-colocarTexto("fraseNombres", "“" + evento.fraseNombres + "”");
-colocarTexto("fraseEvento", evento.frase);
-colocarTexto("salonEvento", evento.salon);
-colocarTexto("horaRecepcion", "Recepción a partir de las " + evento.horaRecepcion);
+document.getElementById("fraseEvento").textContent = evento.frase;
 
+document.getElementById("salonEvento").textContent = evento.salon;
 
-/*=========================================
-PADRES DE LOS NOVIOS
-=========================================*/
-
-colocarTexto("padreNovia", evento.padresNovia?.[0]);
-colocarTexto("madreNovia", evento.padresNovia?.[1]);
-colocarTexto("padreNovio", evento.padresNovio?.[0]);
-colocarTexto("madreNovio", evento.padresNovio?.[1]);
+document.getElementById("horaRecepcion").textContent =
+    "Recepción a partir de las " + evento.horaRecepcion;
 
 
 /*=========================================
@@ -35,22 +20,39 @@ const fechaEvento = new Date(evento.fechaEvento).getTime();
 
 function actualizarContador() {
 
-    const ahora = Date.now();
-    const diferencia = Math.max(0, fechaEvento - ahora);
+    const ahora = new Date().getTime();
 
-    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+    const diferencia = fechaEvento - ahora;
 
-    colocarTexto("dias", dias);
-    colocarTexto("horas", horas);
-    colocarTexto("minutos", minutos);
-    colocarTexto("segundos", segundos);
+    const dias = Math.floor(
+        diferencia / (1000 * 60 * 60 * 24)
+    );
+
+    const horas = Math.floor(
+        (diferencia % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+    );
+
+    const minutos = Math.floor(
+        (diferencia % (1000 * 60 * 60)) /
+        (1000 * 60)
+    );
+
+    const segundos = Math.floor(
+        (diferencia % (1000 * 60)) /
+        1000
+    );
+
+    document.getElementById("dias").innerHTML = dias;
+    document.getElementById("horas").innerHTML = horas;
+    document.getElementById("minutos").innerHTML = minutos;
+    document.getElementById("segundos").innerHTML = segundos;
+
 }
 
-actualizarContador();
 setInterval(actualizarContador, 1000);
+
+actualizarContador();
 
 
 /*=========================================
@@ -58,57 +60,69 @@ MÚSICA
 =========================================*/
 
 const musica = document.getElementById("musicaFondo");
+
+musica.src = evento.musica;
+
 const botonMusica = document.getElementById("musica");
 
-if (musica) {
-    musica.src = evento.musica;
-}
+botonMusica.addEventListener("click", function() {
 
-if (musica && botonMusica) {
+    if (musica.paused) {
 
-    botonMusica.addEventListener("click", function() {
+        musica.play();
 
-        if (musica.paused) {
+        botonMusica.innerHTML =
+            '<i class="fa-solid fa-pause"></i>';
 
-            musica.play().then(function() {
-                botonMusica.innerHTML = '<i class="fa-solid fa-pause"></i>';
-                botonMusica.style.background = "#d4af37";
-                botonMusica.style.color = "white";
-            }).catch(function(error) {
-                console.error("No se pudo reproducir la música:", error);
-            });
+        botonMusica.style.background = "#d4af37";
+        botonMusica.style.color = "white";
 
-        } else {
+    } else {
 
-            musica.pause();
-            botonMusica.innerHTML = '<i class="fa-solid fa-play"></i>';
-            botonMusica.style.background = "white";
-            botonMusica.style.color = "#222";
+        musica.pause();
 
-        }
+        botonMusica.innerHTML =
+            '<i class="fa-solid fa-play"></i>';
 
-    });
+        botonMusica.style.background = "white";
+        botonMusica.style.color = "#222";
 
-}
+    }
+
+});
 
 
 /*=========================================
-NUESTRA HISTORIA (SOLO TEXTO)
+UBICACIÓN
 =========================================*/
 
-if (evento.historia?.nacimiento) {
+const botonUbicacion = document.getElementById("ubicacion");
 
-    colocarTexto(
-        "tituloNacimiento",
-        evento.historia.nacimiento.subtitulo || evento.historia.nacimiento.titulo
+botonUbicacion.addEventListener("click", function() {
+
+    window.open(
+        evento.mapaRecepcion,
+        "_blank"
     );
 
-    colocarTexto(
-        "textoNacimiento",
-        evento.historia.nacimiento.texto
-    );
+});
 
-}
+
+/*=========================================
+LIGHTBOX
+=========================================*/
+
+const lightbox = document.getElementById("lightbox");
+
+const imagenGrande = document.getElementById("imagenGrande");
+
+const cerrar = document.getElementById("cerrar");
+
+cerrar.addEventListener("click", function() {
+
+    lightbox.style.display = "none";
+
+});
 
 
 /*=========================================
@@ -116,72 +130,80 @@ CONFIRMACIÓN DE ASISTENCIA
 =========================================*/
 
 let adultos = 1;
+
 let ninos = 0;
 
 const txtAdultos = document.getElementById("adultos");
+
 const txtNinos = document.getElementById("ninos");
 
-const masAdultos = document.getElementById("masAdultos");
-const menosAdultos = document.getElementById("menosAdultos");
-const masNinos = document.getElementById("masNinos");
-const menosNinos = document.getElementById("menosNinos");
 
-const confirmarWhatsapp = document.getElementById("confirmarWhatsapp");
+document.getElementById("masAdultos").onclick = function() {
 
-if (txtAdultos) txtAdultos.textContent = adultos;
-if (txtNinos) txtNinos.textContent = ninos;
+    adultos++;
 
-if (masAdultos) {
-    masAdultos.onclick = function() {
-        adultos++;
-        colocarTexto("adultos", adultos);
-    };
-}
+    txtAdultos.innerHTML = adultos;
 
-if (menosAdultos) {
-    menosAdultos.onclick = function() {
-        if (adultos > 1) {
-            adultos--;
-            colocarTexto("adultos", adultos);
-        }
-    };
-}
+};
 
-if (masNinos) {
-    masNinos.onclick = function() {
-        ninos++;
-        colocarTexto("ninos", ninos);
-    };
-}
 
-if (menosNinos) {
-    menosNinos.onclick = function() {
-        if (ninos > 0) {
-            ninos--;
-            colocarTexto("ninos", ninos);
-        }
-    };
-}
+document.getElementById("menosAdultos").onclick = function() {
 
-if (confirmarWhatsapp) {
+    if (adultos > 1) {
 
-    confirmarWhatsapp.onclick = function() {
+        adultos--;
 
-        const campoNombre = document.getElementById("nombreInvitado");
-        const nombre = campoNombre ? campoNombre.value.trim() : "";
+        txtAdultos.innerHTML = adultos;
 
-        if (nombre === "") {
-            alert("Por favor escribe tu nombre.");
-            return;
-        }
+    }
 
-        const telefono = evento.telefono;
+};
 
-        const mensaje = `Hola.
+
+document.getElementById("masNinos").onclick = function() {
+
+    ninos++;
+
+    txtNinos.innerHTML = ninos;
+
+};
+
+
+document.getElementById("menosNinos").onclick = function() {
+
+    if (ninos > 0) {
+
+        ninos--;
+
+        txtNinos.innerHTML = ninos;
+
+    }
+
+};
+
+
+document.getElementById("confirmarWhatsapp").onclick = function() {
+
+    const nombre =
+        document.getElementById("nombreInvitado").value;
+
+    if (nombre.trim() === "") {
+
+        alert("Por favor escribe tu nombre.");
+
+        return;
+
+    }
+
+    const telefono = "5219612135882";
+
+    const mensaje =
+
+`Hola.
 
 Mi nombre es ${nombre}.
 
-Confirmo mi asistencia a la boda de ${evento.nombreNovios}.
+Confirmo mi asistencia a los XV años de ${evento.nombre}.
 
 Adultos: ${adultos}
 
@@ -189,71 +211,323 @@ Niños: ${ninos}
 
 Muchas gracias.`;
 
-        window.open(
-            `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`,
-            "_blank"
-        );
+    window.open(
 
-    };
+        `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`,
 
-}
+        "_blank"
+
+    );
+
+};
+
+
+/*=========================================
+BOTÓN WHATSAPP → CONFIRMACIÓN
+=========================================*/
+
+const botonWhatsapp =
+    document.getElementById("whatsapp");
+
+const seccionConfirmacion =
+    document.getElementById("confirmacion");
+
+botonWhatsapp.addEventListener("click", function() {
+
+    seccionConfirmacion.scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+});
 
 
 /*=========================================
 AGENDA
 =========================================*/
 
-const timeline = document.getElementById("timeline");
+const timeline =
+    document.getElementById("timeline");
 
-if (timeline && Array.isArray(evento.agenda)) {
+evento.agenda.forEach(function(item) {
 
-    timeline.innerHTML = "";
+    timeline.innerHTML += `
 
-    evento.agenda.forEach(function(item) {
+        <div class="evento">
 
-        timeline.innerHTML += `
-            <div class="evento">
-                <div class="hora">
-                    ${item.hora}
-                </div>
-
-                <div class="contenido">
-                    <h3>${item.titulo}</h3>
-                    <p>${item.descripcion}</p>
-                </div>
+            <div class="hora">
+                ${item.hora}
             </div>
-        `;
 
-    });
+            <div class="contenido">
 
-}
+                <h3>${item.titulo}</h3>
+
+                <p>${item.descripcion}</p>
+
+            </div>
+
+        </div>
+
+    `;
+
+});
 
 
 /*=========================================
-MAPA DE RECEPCIÓN
+MAPA RECEPCIÓN
 =========================================*/
 
-const btnMapaRecepcion = document.getElementById("btnMapaRecepcion");
+document.getElementById("btnMapaRecepcion").onclick =
+    function(e) {
 
-if (btnMapaRecepcion && evento.mapaRecepcion) {
-
-    btnMapaRecepcion.addEventListener("click", function(e) {
         e.preventDefault();
+
         window.open(evento.mapaRecepcion, "_blank");
+
+    };
+
+
+/*=========================================
+GALERÍA DINÁMICA
+=========================================*/
+
+const gridGaleria =
+    document.getElementById("gridGaleria");
+
+for (const foto of evento.galeria) {
+
+    const imagen =
+        document.createElement("img");
+
+    imagen.src = foto;
+
+    imagen.alt = "Galería";
+
+    imagen.addEventListener("click", function() {
+
+        lightbox.style.display = "flex";
+
+        imagenGrande.src = this.src;
+
     });
+
+    gridGaleria.appendChild(imagen);
+
+}
+
+/*=========================================
+HISTORIA — GALERÍA CON FOTO PRINCIPAL
+Y MINIATURAS EN CARRUSEL
+=========================================*/
+
+function crearGaleriaHistoria(fotos, contenedorId) {
+
+    const contenedor =
+        document.getElementById(contenedorId);
+
+    if (!contenedor || !fotos || fotos.length === 0) {
+        return;
+    }
+
+    contenedor.innerHTML = "";
+
+
+    /*=====================================
+      FOTO PRINCIPAL
+    =====================================*/
+
+    const imagenPrincipal =
+        document.createElement("img");
+
+    imagenPrincipal.src = fotos[0];
+
+    imagenPrincipal.alt =
+        "Fotografía de la historia";
+
+    imagenPrincipal.classList.add(
+        "historia-foto-principal"
+    );
+
+
+    /*=====================================
+      LIGHTBOX
+    =====================================*/
+
+    imagenPrincipal.addEventListener(
+        "click",
+        function () {
+
+            lightbox.style.display = "flex";
+
+            imagenGrande.src = this.src;
+
+        }
+    );
+
+
+    contenedor.appendChild(imagenPrincipal);
+
+
+    /*=====================================
+      CONTENEDOR DE MINIATURAS
+    =====================================*/
+
+    const miniaturas =
+        document.createElement("div");
+
+    miniaturas.classList.add(
+        "historia-miniaturas"
+    );
+
+
+    /*=====================================
+      CREAR MINIATURAS
+    =====================================*/
+
+    fotos.forEach(function (foto, indice) {
+
+        const miniatura =
+            document.createElement("img");
+
+        miniatura.src = foto;
+
+        miniatura.alt =
+            "Recuerdo " + (indice + 1);
+
+        miniatura.classList.add(
+            "historia-miniatura"
+        );
+
+
+        /* Primera foto activa */
+
+        if (indice === 0) {
+
+            miniatura.classList.add(
+                "activa"
+            );
+
+        }
+
+
+        /*=================================
+          CAMBIAR FOTO PRINCIPAL
+        =================================*/
+
+        miniatura.addEventListener(
+            "click",
+            function () {
+
+                imagenPrincipal.src =
+                    this.src;
+
+
+                /* Quitar estado activo */
+
+                miniaturas
+                    .querySelectorAll(
+                        ".historia-miniatura"
+                    )
+                    .forEach(function (item) {
+
+                        item.classList.remove(
+                            "activa"
+                        );
+
+                    });
+
+
+                /* Marcar seleccionada */
+
+                this.classList.add(
+                    "activa"
+                );
+
+            }
+        );
+
+
+        miniaturas.appendChild(
+            miniatura
+        );
+
+    });
+
+
+    contenedor.appendChild(
+        miniaturas
+    );
+
+}
+/*=========================================
+CREAR GALERÍA DE NACIMIENTO
+=========================================*/
+
+crearGaleriaHistoria(
+    evento.historia.nacimiento.fotos,
+    "galeriaNacimiento"
+);
+
+
+/*=========================================
+CREAR GALERÍA DE INFANCIA
+=========================================*/
+
+crearGaleriaHistoria(
+    evento.historia.infancia.fotos,
+    "galeriaInfancia"
+);
+
+
+/*=========================================
+TEXTOS DE HISTORIA
+=========================================*/
+
+if (evento.historia.nacimiento) {
+
+    document.getElementById(
+        "tituloNacimiento"
+    ).textContent =
+        evento.historia.nacimiento.titulo;
+
+    document.getElementById(
+        "textoNacimiento"
+    ).textContent =
+        evento.historia.nacimiento.texto;
 
 }
 
 
+if (evento.historia.infancia) {
+
+    document.getElementById(
+        "tituloInfancia"
+    ).textContent =
+        evento.historia.infancia.titulo;
+
+    document.getElementById(
+        "textoInfancia"
+    ).textContent =
+        evento.historia.infancia.texto;
+
+}
 
 /*=========================================
 PADRINOS Y NOMBRAMIENTOS
 =========================================*/
 
-const contenedorPadrinos = document.getElementById("contenedorPadrinos");
-const seccionSoloPadrinos = document.getElementById("seccionSoloPadrinos");
+const listaPadrinos =
+    document.getElementById("listaPadrinos");
+
+const seccionSoloPadrinos =
+    document.getElementById("seccionSoloPadrinos");
 
 const parametros = new URLSearchParams(window.location.search);
+
 const categoriaSeleccionada = parametros.get("padrinos");
 const tipoInvitacion = parametros.get("tipo");
 
@@ -263,90 +537,91 @@ if (tipoInvitacion === "invitados") {
         seccionSoloPadrinos.style.display = "none";
     }
 
-} else if (contenedorPadrinos && Array.isArray(evento.padrinos)) {
-
-    contenedorPadrinos.innerHTML = "";
+} else if (listaPadrinos && evento.padrinos) {
 
     const padrinosMostrar = categoriaSeleccionada
-        ? evento.padrinos.filter(p => p.categoria === categoriaSeleccionada)
+        ? evento.padrinos.filter(function(padrino) {
+            return padrino.categoria === categoriaSeleccionada;
+        })
         : evento.padrinos;
-
-    // Agrupar los padrinos por categoría
-    const gruposPadrinos = {};
 
     padrinosMostrar.forEach(function(padrino) {
 
-        if (!gruposPadrinos[padrino.categoria]) {
-            gruposPadrinos[padrino.categoria] = {
-                titulo: padrino.titulo,
-                nombres: []
-            };
-        }
+        listaPadrinos.innerHTML += `
 
-        gruposPadrinos[padrino.categoria].nombres.push(padrino.nombres);
-
-    });
-
-    // Crear una tarjeta por cada categoría
-    Object.values(gruposPadrinos).forEach(function(grupo) {
-
-        contenedorPadrinos.innerHTML += `
             <div class="padrino-card">
 
                 <p class="texto-nombramiento">
                     Tenemos el honor de nombrarlos
                 </p>
 
-                <h3>${grupo.titulo}</h3>
+                <h3>
+                    ${padrino.titulo}
+                </h3>
 
                 <p class="nombre-padrino">
-                    ${grupo.nombres.join("<br>")}
+                    ${padrino.nombres}
                 </p>
 
             </div>
+
         `;
 
     });
 
 }
 
-
 /*=========================================
 ANIMACIONES AOS
 =========================================*/
 
-if (typeof AOS !== "undefined") {
+AOS.init({
 
-    AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100
-    });
+    duration: 1000,
 
-}
+    once: true,
+
+    offset: 100
+
+});
 
 
 /*=========================================
 CARRUSEL DE PORTADA
 =========================================*/
 
-const slides = document.querySelectorAll(".hero-slide");
+const slides =
+    document.querySelectorAll(".hero-slide");
+
 let slideActual = 0;
+
+
+function cambiarSlide() {
+
+    slides[slideActual]
+        .classList.remove("active");
+
+    slideActual++;
+
+
+    if (slideActual >= slides.length) {
+
+        slideActual = 0;
+
+    }
+
+
+    slides[slideActual]
+        .classList.add("active");
+
+}
+
 
 if (slides.length > 1) {
 
-    setInterval(function() {
-
-        slides[slideActual].classList.remove("active");
-
-        slideActual++;
-
-        if (slideActual >= slides.length) {
-            slideActual = 0;
-        }
-
-        slides[slideActual].classList.add("active");
-
-    }, 5000);
+    setInterval(
+        cambiarSlide,
+        5000
+    );
 
 }
