@@ -1,194 +1,205 @@
+
 window.evento = {
 
-    tipo: "MIS XV",
+    // DATOS GENERALES
 
-    nombre: "Elena",
+    tipo: "NUESTRA BODA",
 
-    frase: "Quince años de recuerdos, sueños y nuevos comienzos.",
+    nombre: "Abe & Jess",
 
-    historia: {
+    frase: "",
 
-        nacimiento: {
-            titulo: "Mi nacimiento",
-            subtitulo: "Un comienzo lleno de esperanza",
-            texto: "Llegué al mundo antes de lo esperado, siendo una pequeña prematura que tuvo que enfrentar muchas complicaciones desde sus primeros momentos de vida. Fueron días llenos de preocupación, incertidumbre y esperanza para mi familia. Pero desde el principio demostré que tenía muchas ganas de vivir. Cada pequeño avance fue una razón para celebrar y cada día que pasaba se convertía en una nueva oportunidad. Hoy, al mirar atrás, comprendo que mi historia comenzó con una gran lucha, pero también con mucho amor.",
-            fotos: [
-                "historia/nacimiento/foto1.jpeg",
-                "historia/nacimiento/foto2.jpeg",
-                "historia/nacimiento/foto3.jpeg",
-                "historia/nacimiento/foto4.jpeg",
-                "historia/nacimiento/foto5.jpeg"
-            ]
-        },
+  nombreNovios: "Abelardo Toledo Montero & Jessica Anahí Díaz Flores",
 
-        infancia: {
-            titulo: "Mi infancia",
-            subtitulo: "Los primeros capítulos de mi historia",
-            texto: "Con el paso de los años fui creciendo rodeada del amor de mi familia. Cada etapa de mi infancia estuvo llena de momentos, juegos, aprendizajes y recuerdos que hoy forman parte de la persona en la que me he convertido. Fueron años llenos de experiencias que guardo con mucho cariño en mi corazón.",
-            fotos: [
-                "historia/infancia/foto1.jpeg",
-                "historia/infancia/foto2.jpeg",
-                "historia/infancia/foto3.jpeg",
-                "historia/infancia/foto4.jpeg",
-                "historia/infancia/foto5.jpeg",
-                "historia/infancia/foto6.jpeg",
-                "historia/infancia/foto7.jpeg",
-                "historia/infancia/foto8.jpeg"
-            ]
-        }
+    fraseNombres: "La historia comienza cuando dos personas que ni soñaban conocerse terminan encontrándose en el instante menos esperado, pero en el momento indicado.",
 
-    },
+    // PADRES DE LOS NOVIOS
 
-    fechaEvento: "December 26, 2026 17:00:00",
+    padresNovia: [
+        "Sr. Bulmaro Díaz Estrada",
+        "Sra. Gulnara Flores José (†)"
+    ],
 
-    fecha: "26 de diciembre de 2026",
+    padresNovio: [
+        "Sr. Abigail Toledo Vázquez",
+        "Sra. Lucina Montero Vásquez"
+    ],
 
-    hora: "4:00 PM",
+    /*=========================================
+NUESTRA HISTORIA
+=========================================*/
 
-    salon: 'Salón "La Victoria", Colonia Cuauhtémoc, Villaflores, Chiapas',
+historia: {
 
-    mapaRecepcion: "https://maps.app.goo.gl/Kx8nyLzdhUhHKvVw8",
+    nacimiento: {
+        titulo: "Nuestra historia",
+        subtitulo: "Dos corazones, un mismo camino",
+        texto: "Lo que comenzó como un encuentro se convirtió en una historia de amor. Hoy elegimos caminar juntos, compartir sueños y construir una vida de la mano. Y qué mejor manera de celebrar este amor que rodeados de quienes más queremos."
+    }
 
-    horaRecepcion: "4:00 PM",
-    
+},
+    // FECHA Y UBICACIÓN
 
-    telefono: "5219612135882",
+    fechaEvento: "December 27, 2026 13:30:00",
+
+    fecha: "27 de diciembre de 2026",
+
+    hora: "1:30 p. m.",
+
+    salon: "Quinta Velbet Eventos, Villaflores, Chiapas",
+
+    mapaRecepcion: "https://maps.app.goo.gl/nYPgfpENQ6hVaJzG7",
+
+    horaRecepcion: "1:30 p. m.",
+
+    // CONFIRMACIÓN DE ASISTENCIA
+
+    telefono: "526645041402",
+
+    // MÚSICA
 
     musica: "music/cancion.mp3",
 
+    // PADRINOS POR CATEGORÍA
+
     padrinos: [
 
-    {
-        categoria: "vestido",
-        titulo: "Padrinos de vestido",
-        nombres: "Oscar Torres Gutiérrez, José Manuel Vergara Becerra, Juan Carlos José Solís, Alember Molina Hernández y Gloribel Hernández"
-    },
+        // PADRINOS DE PASTEL
 
-    {
-        categoria: "musica",
-        titulo: "Padrinos de música",
-        nombres: "Hugo Alberto Mendoza, Otoniel López Gómez, Jorge López Gómez, Eliú López Gómez y Fabiola López"
-    },
+        {
+            categoria: "pastel",
+            titulo: "Padrinos de pastel",
+            nombres: "Prof. Abimael Pérez Bautista y Sra."
+        },
 
-    {
-        categoria: "pastel",
-        titulo: "Padrinos de pastel",
-        nombres: "Bernabé José, Luis Alberto Pérez, Francisco Toalá, David Pérez y Juan Carlos Flores"
-    },
+        {
+            categoria: "pastel",
+            titulo: "Padrinos de pastel",
+            nombres: "Sr. Rubinoy Pérez Bautista y Sra."
+        },
 
-    {
-        categoria: "arreglo-salon",
-        titulo: "Padrinos de arreglo de salón",
-        nombres: "Sayuri Jamai Pérez, Aner Cervantes, Luis Alfredo Hernández, Isaías Hidalgo y Ofelia Solís"
-    },
+        {
+            categoria: "pastel",
+            titulo: "Padrinos de pastel",
+            nombres: "Prof. Ernesto Pérez Bautista y Sra."
+        },
 
-    {
-        categoria: "centro-mesa",
-        titulo: "Padrinos de centro de mesa",
-        nombres: "Merari Pérez, Saúl Hernández, Héctor Manuel Hernández y Marcos Manuel Díaz Hernández"
-    },
+        {
+            categoria: "pastel",
+            titulo: "Padrinos de pastel",
+            nombres: "Sra. María Elida Pérez Bautista"
+        },
 
-    {
-        categoria: "regalo-sorpresa",
-        titulo: "Padrinos de regalo sorpresa",
-        nombres: "Erick Gómez y Marco Antonio Torres"
-    },
+        // PADRINOS DE BRINDIS
 
-    {
-        categoria: "muneca",
-        titulo: "Padrinos de muñeca",
-        nombres: "Benito Rincón Espinoza"
-    },
+        {
+            categoria: "brindis",
+            titulo: "Padrinos de brindis",
+            nombres: "Ing. Jesús Salvador Ramírez Hernández y Sra."
+        },
 
-    {
-        categoria: "brindis",
-        titulo: "Padrinos de brindis",
-        nombres: "Manuel José Solís y Fredi Urbina"
-    },
+        // PADRINOS DE ANILLOS
 
-    {
-        categoria: "fotografia",
-        titulo: "Padrinos de fotografía",
-        nombres: "Estela Constantino, Francisco Javier Velasco Macal y José Ignacio Vásquez"
-    },
+        {
+            categoria: "anillos",
+            titulo: "Padrinos de anillos",
+            nombres: "Sr. José Rusbel Domínguez y Sra."
+        },
 
-    {
-        categoria: "zapatillas",
-        titulo: "Padrinos de zapatillas",
-        nombres: "Blanca Cecilia Serrano"
-    },
+        // PADRINOS DE CASAMIENTO
 
-    {
-        categoria: "album",
-        titulo: "Padrinos de álbum",
-        nombres: "Enedid Gumeta"
-    }
+        {
+            categoria: "casamiento",
+            titulo: "Padrinos de casamiento",
+            nombres: "Sr. Rubiel Rodas y Sra."
+        },
 
-],
+        {
+            categoria: "casamiento",
+            titulo: "Padrinos de casamiento",
+            nombres: "Sr. Abel Rodas y Sra."
+        },
+
+        {
+            categoria: "casamiento",
+            titulo: "Padrinos de casamiento",
+            nombres: "Sr. Rodulfo Ventura y Sra."
+        },
+
+        {
+            categoria: "casamiento",
+            titulo: "Padrinos de casamiento",
+            nombres: "Sr. José Antonio Montero y Sra."
+        },
+
+        {
+            categoria: "casamiento",
+            titulo: "Padrinos de casamiento",
+            nombres: "Sr. Huberto Salinas y Sra."
+        }
+
+    ],
+
+    // PROGRAMA DEL EVENTO
 
     agenda: [
 
         {
-            hora: "3:45 PM",
-            titulo: "Salida de la Quinceañera",
-            descripcion: "Casa del Sra. María Delma Ruiz Sesma"
-        },
-
-        {
-            hora: "4:00 PM",
+            hora: "1:30 p. m.",
             titulo: "Recepción",
-            descripcion: 'Salón "La Victoria"'
+            descripcion: "Bienvenida a nuestros invitados."
         },
 
         {
-            hora: "4:30 PM",
-            titulo: "Sesión de Fotografías",
-            descripcion: "Con familiares e invitados."
+            hora: "2:00 p. m.",
+            titulo: "Entrada de los novios",
+            descripcion: "La entrada especial de Abelardo y Jessica."
         },
 
         {
-            hora: "5:00 PM",
-            titulo: "Presentación y Vals",
-            descripcion: ""
+            hora: "2:30 p. m.",
+            titulo: "Vals de los novios y vals familiar",
+            descripcion: "Compartiremos este momento con nuestras familias."
         },
 
         {
-            hora: "5:30 PM",
-            titulo: "Cena",
-            descripcion: ""
+            hora: "2:40 p. m.",
+            titulo: "Comida",
+            descripcion: "Disfrutemos juntos de esta celebración."
         },
 
         {
-            hora: "6:00 PM",
-            titulo: "Ceremonia de Brindis",
-            descripcion: ""
+            hora: "3:30 p. m.",
+            titulo: "Brindis",
+            descripcion: "Celebremos el amor y esta nueva etapa."
         },
 
         {
-            hora: "6:30 PM",
-            titulo: "Regalo Sorpresa",
-            descripcion: ""
+            hora: "3:50 p. m.",
+            titulo: "Entrega de anillos",
+            descripcion: "Un momento especial de nuestra celebración."
         },
 
         {
-            hora: "7:00 PM",
-            titulo: "Baile",
-            descripcion: ""
+            hora: "4:00 p. m.",
+            titulo: "Corte de pastel",
+            descripcion: "Compartamos este dulce momento."
+        },
+
+        {
+            hora: "4:30 p. m.",
+            titulo: "Lanzamiento del ramo",
+            descripcion: "Un momento para compartir la alegría."
         }
 
     ],
 
-    galeria: [
+    // GALERÍA DE FOTOGRAFÍAS
 
-        "galeria/foto2.jpg",
-        "galeria/foto1.jpg",
-        "galeria/foto3.jpg",
-        "galeria/foto6.jpg",
-        "galeria/foto4.jpg",
-        "galeria/foto5.jpg"
+    galeria: [],
 
-    ],
+    // FOTOGRAFÍA FINAL
 
-    fotoDespedida: "galeria/despedida.jpg"
+    fotoDespedida: ""
 
 };

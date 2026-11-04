@@ -1,3 +1,17 @@
+/* =========================================
+   PALETA DE COLORES - ABE & JESS
+========================================= */
+
+:root {
+    --verde: #A8B86A;
+    --dorado: #C6A04A;
+    --marfil: #FAF8F0;
+    --cafe: #594536;
+
+    --fondo-principal: var(--marfil);
+    --texto-principal: var(--cafe);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +41,7 @@ body{
 #contador {
     padding: 70px 20px 90px;
 
-    background: #879786;
+    background: #FFFEFC;
 
     text-align: center;
 }
@@ -77,7 +91,7 @@ body{
 
     height: 1px;
 
-    background:#879786 ;
+    background: #FFFEFC;
 
     opacity: 0.6;
 }
@@ -95,7 +109,7 @@ body{
 
     text-align: center;
 
-    background: #879786;
+    background: #FFFEFC;
 }
 
 /* =========================================
@@ -187,7 +201,7 @@ body{
 
     font-weight: 600;
 
-    color: #d4b45c
+    color: #91AD55
 
     line-height: 1;
 }
@@ -606,7 +620,7 @@ html {
 
     margin-top:15px;
 
-    color:#879786;
+    color: #FFFEFC;
 
 }
 
@@ -644,7 +658,7 @@ html {
 
     padding:120px 20px;
 
-    background:#879786;
+    background:#FFFEFC;
 
     text-align:center;
 
@@ -834,7 +848,7 @@ html {
 
     padding:120px 20px;
 
-    background:#879786;
+    background:#FFFEFC;
 
 }
 
@@ -940,22 +954,22 @@ html {
 
 }
 
+
 /*=========================================
 AGENDA
 =========================================*/
 
-#agenda{
-
-    padding:120px 20px;
-
-    background: #879786;
-
+#agenda {
+    padding: 120px 20px;
+    background: #FFFEFC;
 }
 
 .timeline {
-    max-width: 900px;
-    margin: auto;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
     position: relative;
+    box-sizing: border-box;
 }
 
 .timeline::before {
@@ -965,39 +979,42 @@ AGENDA
     top: 0;
     bottom: 0;
     width: 2px;
-    background: #d4af37;
+    background: #D4AF37;
 }
+
 
 .evento {
     display: grid;
-    grid-template-columns: 110px 1fr;
-    column-gap: 40px;
-    margin-bottom: 50px;
+    grid-template-columns: 90px minmax(0, 1fr);
+    column-gap: 25px;
+    margin-bottom: 40px;
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
+
 
 .hora {
     width: 110px;
     font-weight: bold;
-    color: #d4af37;
+    color: #91AD55;
     text-align: right;
     padding-top: 25px;
-
 }
 
 .contenido {
-    background: white;
+    background: #A8B86A;
     padding: 25px;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.08);
-
+    border: 1px solid #879A50;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
 }
 
-.contenido h3{
-
-    margin-bottom:10px;
-
+.contenido h3 {
+    margin-bottom: 10px;
+    color: #35452B;
 }
+
 
 /*=========================================
    NUESTRA HISTORIA
@@ -1446,8 +1463,7 @@ AGENDA
 
 #familia {
     padding: 120px 20px;
-
-    background: #879786;
+    background: #FFFEFC;
 }
 
 /* =========================================
@@ -1487,7 +1503,7 @@ AGENDA
 
     letter-spacing: 3px;
 
-    color: #d4b45c;
+    color: #91AD55;
 
     font-weight: bold;
 
@@ -1529,7 +1545,8 @@ AGENDA
 .familia-separador {
     margin: 40px 0;
 
-    color: #d4b45c;
+    color: #91AD55;
+
 
     font-size: 22px;
 
@@ -1615,7 +1632,7 @@ AGENDA
 
     font-weight: 600;
 
-    color: #d4b45c;
+    color: #91AD55;
 
 margin: 0;
 
@@ -1805,7 +1822,7 @@ margin: 0;
 
     font-size: 20px !important;
 
-    color:#879786; !important;
+    color:#FFFEFC; !important;
 }
 /* =========================================
    REGALOS — CELULAR
@@ -2465,7 +2482,7 @@ margin: 0;
     font-family: "Cormorant Garamond", serif;
     font-size: 26px;
     font-weight: 600;
-    color: #d4b45c
+    color: #91AD55;
     margin: 0;
 }
 
@@ -2563,7 +2580,7 @@ margin: 0;
     border: 1px solid #d4af37;
     border-radius: 50%;
     background: white;
-    color: #d4b45c
+    color: #91AD55;
     font-size: 20px;
     cursor: pointer;
 }
@@ -3267,24 +3284,280 @@ margin: 0;
 
 }
 
+
+/* =========================================
+   PORTADA ABE & JESS
+   DISEÑO BLANCO Y VERDE MANZANA
+========================================= */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    height: auto;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 55px 20px 45px;
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(ellipse at 50% 35%, #ffffff 0%, #fffefa 65%, #f2f6e9 100%);
+
+    color: #596b43;
+}
+
+/* Ocultar carrusel anterior */
+.hero-slider {
+    display: none !important;
+}
+
+/* Contenido */
+.hero-contenido {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+
+    width: 100%;
+    max-width: 650px;
+    padding: 20px 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 3;
+}
+
+/* NUESTRA BODA */
+.hero-contenido #tipoEvento {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: clamp(16px, 2.5vw, 21px) !important;
+    font-weight: 500 !important;
+    letter-spacing: 7px !important;
+    line-height: 1.4 !important;
+
+    color: #78934d !important;
+    text-shadow: none !important;
+
+    margin: 0 0 12px !important;
+}
+
+/* Nombres */
+.hero-contenido #nombreEvento {
+    font-family: 'Pinyon Script', cursive !important;
+    font-size: clamp(65px, 12vw, 105px) !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+
+    color: #718b48 !important;
+    text-shadow: none !important;
+
+    margin: 20px 0 22px !important;
+
+}
+
+/* Ocultar frase vacía */
+.hero-contenido #fraseEvento {
+    display: none;
+}
+
+/* Separador decorativo */
+.adorno-portada {
+    width: 90px;
+    height: 1px;
+    background: #a7bd79;
+    margin: 0 auto 25px;
+}
+
+/* Fecha */
+.fecha-portada {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    letter-spacing: 3px;
+    font-weight: 500;
+
+    color: #718b48;
+    margin: 0 0 12px;
+}
+
+/* FALTAN */
+.contador-portada h3 {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 36px;
+    font-weight: 400;
+
+    color: #718b48;
+    margin: 0 0 12px;
+}
+
+/* Contador horizontal */
+.contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(15px, 4vw, 35px);
+
+    width: 100%;
+}
+
+/* Cada número */
+.tiempo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 45px;
+}
+
+/* Números */
+.tiempo span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 5vw, 43px);
+    font-weight: 500;
+    line-height: 1;
+
+    color: #718b48;
+}
+
+/* Días, horas, minutos, segundos */
+.tiempo small {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #84936d;
+    margin-top: 7px;
+}
+
+.boton-musica-portada {
+    margin-top: 15px;
+    padding: 3px 8px;
+
+    border: 1px solid #9bb36e;
+    border-radius: 20px;
+
+    background: transparent;
+    color: #718b48;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+    line-height: 1.2;
+}
+
+/* Ver invitación */
+#btnInvitacion {
+    margin-top: 15px;
+    padding: 12px 30px;
+
+    border: 1px solid #8da65d;
+    border-radius: 30px;
+
+    background: #8da65d;
+    color: white;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-decoration: none;
+
+    transition: all .3s ease;
+}
+
+#btnInvitacion:hover {
+    background: #718b48;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Adaptación para celulares */
 @media (max-width: 600px) {
+
+    .hero {
+        min-height: 100svh;
+        padding: 35px 15px;
+    }
+
+    .hero-contenido {
+        padding: 15px 5px;
+    }
+
+    .hero-contenido #tipoEvento {
+        font-size: 15px !important;
+        letter-spacing: 5px !important;
+    }
+
+    .hero-contenido #nombreEvento {
+        font-size: 68px !important;
+        margin-bottom: 18px !important;
+    }
+
+    .fecha-portada {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .contador-portada h3 {
+        font-size: 32px;
+    }
+
+    .contador {
+        gap: 13px;
+    }
+
+    .tiempo {
+        min-width: 42px;
+    }
+
+    .tiempo span {
+        font-size: 30px;
+    }
+
+    .tiempo small {
+        font-size: 8px;
+        letter-spacing: 0.5px;
+    }
+
+    .boton-musica-portada {
+    margin-top: 20px;
+    padding: 6px 12px;
+    font-size: 8px;
+
+}
+
 
     /* =================================
        AGENDA - CELULAR
     ================================= */
 
-    #agenda {
-        padding: 80px 15px;
-        overflow: hidden;
-        box-sizing: border-box;
-    }
+ 
+#agenda {
+    padding: 100px 20px;
+    background: #FFFEFC;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
 
-    .timeline {
-        width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
-        box-sizing: border-box;
-    }
+   
+#agenda .timeline {
+    width: 100%;
+    max-width: 620px;
+    margin: 40px auto 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
 
     .timeline::before {
         left: 43px;
@@ -3654,7 +3927,7 @@ margin: 0;
 }
 
 #familia {
-    background: #879786 !important;
+    background: #FFFEFC; !important;
 }
 
 /* DECORACIÓN FLORAL DEL CONTADOR */
@@ -3909,4 +4182,1092 @@ gap: 3px;
         padding-right: 10px;
     }
 
+}
+
+
+/* =========================================
+   CONTADOR ABE & JESS - SIN RECUADROS
+========================================= */
+
+.contador-portada {
+    width: 100%;
+    margin: 10px auto 0;
+    text-align: center;
+}
+
+.contador-portada h3 {
+    font-family: 'Pinyon Script', cursive !important;
+    font-size: 30px !important;
+    font-weight: 400 !important;
+    color: #718b48 !important;
+    margin: 0 0 12px !important;
+}
+
+.contador {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    gap: 22px !important;
+    width: auto !important;
+    max-width: 340px;
+    margin: 0 auto !important;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.contador .tiempo {
+    display: flex !important;
+    flex: 0 1 auto !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    min-width: 0 !important;
+    width: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.contador .tiempo span {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 34px !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    color: #718b48 !important;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.contador .tiempo small {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 9px !important;
+    font-weight: 400 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    color: #84936d !important;
+    margin-top: 5px !important;
+
+    background: transparent !important;
+    border: none !important;
+}
+
+/* Ajuste para celular */
+@media (max-width: 600px) {
+    .contador {
+        gap: 16px !important;
+        max-width: 290px;
+    }
+
+    .contador .tiempo span {
+        font-size: 29px !important;
+    }
+
+    .contador .tiempo small {
+        font-size: 8px !important;
+        letter-spacing: 0.5px !important;
+    }
+}
+
+
+/* =========================================
+   TARJETAS INDIVIDUALES DE PADRINOS
+========================================= */
+
+#contenedorPadrinos,
+#listaPadrinos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    margin: 35px auto 0;
+}
+
+.padrino-card {
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+
+    padding: 35px 25px;
+    margin: 0 auto;
+
+    background: #f5f0e6;
+    border: 1px solid rgba(212, 180, 92, 0.35);
+    border-radius: 18px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .padrino-card {
+        padding: 30px 18px;
+        border-radius: 15px;
+    }
+
+    #contenedorPadrinos,
+    #listaPadrinos {
+        gap: 20px;
+    }
+}
+
+/* CONTENEDOR DE FOTO Y FLORES */
+.contenedor-foto-ovalada {
+    position: relative;
+    width: 340px;
+    margin: 30px auto;
+}
+
+/* FOTO OVALADA DE LOS NOVIOS */
+.foto-ovalada-portada {
+    width: 260px;
+    height: 340px;
+    margin: 20px auto;
+    border: 5px solid #C6A04A;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px rgba(198, 160, 74, 0.20);
+    position: relative;
+    z-index: 1;
+}
+
+.foto-ovalada-portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* FLORES ALREDEDOR DEL OVALO */
+.flor-ovalo {
+    position: absolute;
+    width: 210px;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.flor-superior-derecha {
+    top: 0;
+    right: -5px;
+    transform: rotate(-25deg);
+}
+
+.flor-inferior-izquierda {
+    bottom: 0;
+    left: -5px;
+    transform: rotate(155deg);
+}
+
+/* MARCO DE FOTO Y FLORES */
+.marco-foto-portada {
+    position: relative;
+    width: 340px;
+    margin: 30px auto;
+}
+
+/* FOTO OVALADA */
+.foto-ovalada-portada {
+    width: 260px;
+    height: 340px;
+    margin: 20px auto;
+    border: 5px solid #C6A04A;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px rgba(198, 160, 74, 0.20);
+    position: relative;
+    z-index: 1;
+}
+
+.foto-ovalada-portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* FLORES DEL OVALO */
+.flor-ovalo {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.flor-superior-derecha {
+    top: -50px;
+    right: -5px;
+    transform: rotate(-25deg);
+}
+
+.flor-inferior-izquierda {
+    bottom: 5px;
+    left: 15px;
+    transform: rotate(155deg);
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    .flor-ovalo {
+        width: 125px;
+    }
+}
+
+    .flor-superior-derecha {
+        top: 5px;
+        right: 15px;
+    }
+
+    .flor-inferior-izquierda {
+        bottom: 5px;
+        left: 15px;
+    }
+}
+
+/* MARCO GEOMÉTRICO DORADO DE LA FOTO */
+.marco-foto-portada {
+    position: relative;
+    width: 340px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+/* ESQUINAS DECORATIVAS */
+.marco-foto-portada::before,
+.marco-foto-portada::after {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border-color: #C6A04A;
+    border-style: solid;
+    pointer-events: none;
+}
+
+/* ESQUINA SUPERIOR IZQUIERDA */
+.marco-foto-portada::before {
+    top: 0;
+    left: 0;
+    border-width: 2px 0 0 2px;
+}
+
+/* ESQUINA INFERIOR DERECHA */
+.marco-foto-portada::after {
+    bottom: 0;
+    right: 0;
+    border-width: 0 2px 2px 0;
+}
+
+/* FOTO OVALADA */
+.foto-ovalada-portada {
+    width: 260px;
+    height: 340px;
+    margin: 0 auto;
+    border: 3px solid #C6A04A;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px rgba(198, 160, 74, 0.15);
+    position: relative;
+    z-index: 1;
+}
+
+.foto-ovalada-portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .marco-foto-portada {
+        width: 320px;
+    }
+
+    .foto-ovalada-portada {
+        width: 245px;
+        height: 320px;
+    }
+}
+
+
+/* =====================================
+   MARCO GEOMÉTRICO DE LA PORTADA
+===================================== */
+
+.hero {
+    position: relative;
+}
+
+/* Marco exterior */
+.marco-portada {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    border: 1px solid rgba(198, 160, 74, 0.55);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Cuatro esquinas geométricas */
+.esquina-marco {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-color: #C6A04A;
+    border-style: solid;
+}
+
+/* Superior izquierda */
+.superior-izquierda {
+    top: -1px;
+    left: -1px;
+    border-width: 3px 0 0 3px;
+}
+
+/* Superior derecha */
+.superior-derecha {
+    top: -1px;
+    right: -1px;
+    border-width: 3px 3px 0 0;
+}
+
+/* Inferior izquierda */
+.inferior-izquierda {
+    bottom: -1px;
+    left: -1px;
+    border-width: 0 0 3px 3px;
+}
+
+/* Inferior derecha */
+.inferior-derecha {
+    bottom: -1px;
+    right: -1px;
+    border-width: 0 3px 3px 0;
+}
+
+/* El contenido queda delante del fondo */
+.hero-contenido {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 600px) {
+    .marco-portada {
+        top: 12px;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .esquina-marco {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* FOTO CON MARCO PNG */
+.foto-con-marco {
+    position: relative;
+    width: 340px;
+    height: 430px;
+    margin: 30px auto;
+}
+
+/* FOTOGRAFÍA */
+.foto-novios {
+    position: absolute;
+    width: 75%;
+    height: 80%;
+    top: 10%;
+    left: 12.5%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+/* MARCO DECORATIVO PNG */
+.marco-png {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    object-position: center;
+    z-index: 2;
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    .foto-con-marco {
+        width: 300px;
+        height: 380px;
+    }
+}
+
+/* FOTOGRAFÍA OVALADA DE LOS NOVIOS */
+.foto-portada {
+    width: 280px;
+    height: 360px;
+    margin: 25px auto;
+    overflow: hidden;
+    border: 3px solid #C6A04A;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.foto-portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .foto-portada {
+        width: 250px;
+        height: 330px;
+    }
+}
+
+/* NOMBRES DE LOS NOVIOS */
+#nombresNovios h2 {
+    color: #594536 !important;
+}
+
+/* TEXTO SUPERIOR E INFERIOR */
+#nombresNovios .titulo-seccion span {
+    color: #A8B86A;
+}
+
+/* FRASE DE LOS NOVIOS */
+#nombresNovios .titulo-seccion p {
+    color: #594536;
+}
+
+/* SEPARADOR DORADO */
+#nombresNovios .regalos-separador {
+    color: #C6A04A;
+}
+
+/* SECCIÓN RECEPCIÓN */
+#recepcion .titulo-seccion h2 {
+    color: #594536 !important;
+}
+
+#recepcion .titulo-seccion span {
+    color: #A8B86A !important;
+}
+
+/* =========================================
+   NUESTRA HISTORIA
+========================================= */
+
+/* Título principal */
+#historia .titulo-seccion h2 {
+    color: #594536 !important;
+}
+
+/* Texto superior */
+#historia .titulo-seccion span {
+    color: #A8B86A !important;
+}
+
+/* Subtítulos de la historia */
+#historia .titulo-seccion h3 {
+    color: #594536 !important;
+}
+
+/* Párrafos */
+#historia .titulo-seccion p {
+    color: #594536 !important;
+}
+
+/* Separadores */
+#historia .regalos-separador {
+    color: #C6A04A !important;
+}
+
+/* =========================================
+   PADRES Y PADRINOS
+========================================= */
+
+/* TITULOS PRINCIPALES */
+#papas .titulo-seccion h2 {
+    color: #594536 !important;
+}
+
+/* TEXTOS SUPERIORES */
+#papas .titulo-seccion span {
+    color: #A8B86A !important;
+}
+
+/* SUBTITULOS PADRES DE LA NOVIA Y NOVIO */
+#papas .familia-subtitulo {
+    color: #A8B86A !important;
+}
+
+/* NOMBRES DE LOS PADRES */
+#papas .familia-bloque h3 {
+    color: #594536 !important;
+}
+
+/* TEXTO DE AGRADECIMIENTO */
+#papas .familia-card p {
+    color: #594536 !important;
+}
+
+/* SEPARADORES */
+#papas .familia-separador {
+    color: #C6A04A !important;
+}
+
+/* =========================================
+   DETALLES PARA LOS NOVIOS
+========================================= */
+
+/* TITULO PRINCIPAL */
+#regalos .titulo-seccion h2 {
+    color: #594536 !important;
+}
+
+/* TEXTO SUPERIOR */
+#regalos .titulo-seccion span {
+    color: #A8B86A !important;
+}
+
+/* TEXTOS DE LA TARJETA */
+#regalos .regalos-card p {
+    color: #594536 !important;
+}
+
+/* ICONO DE REGALO */
+#regalos .regalos-icono {
+    color: #C6A04A !important;
+}
+
+/* SEPARADOR */
+#regalos .regalos-separador {
+    color: #C6A04A !important;
+}
+
+/* AGRADECIMIENTO FINAL */
+#regalos .regalos-final {
+    color: #594536 !important;
+}
+
+/* =========================================
+   AGENDA DEL EVENTO
+========================================= */
+
+/* TITULO PRINCIPAL */
+#agenda .titulo-seccion h2 {
+    color: #594536 !important;
+}
+
+/* TEXTO SUPERIOR */
+#agenda .titulo-seccion span {
+    color: #A8B86A !important;
+}
+
+/* ELEMENTOS DE LA AGENDA */
+#agenda .timeline {
+    color: #594536;
+}
+
+/* ICONOS Y DETALLES DORADOS */
+#agenda .timeline i {
+    color: #C6A04A;
+}
+
+/* =========================================
+   CONFIRMACION DE ASISTENCIA
+========================================= */
+
+/* TITULO PRINCIPAL */
+#confirmacion .titulo-seccion h2 {
+    color: #594536 !important;
+}
+
+/* TEXTO SUPERIOR */
+#confirmacion .titulo-seccion span {
+    color: #A8B86A !important;
+}
+
+/* TEXTO DESCRIPTIVO */
+#confirmacion .card-confirmacion p {
+    color: #594536 !important;
+}
+
+/* ETIQUETAS ADULTOS Y NIÑOS */
+#confirmacion .card-confirmacion label {
+    color: #594536 !important;
+}
+
+/* CAMPO DE NOMBRE */
+#confirmacion input {
+    color: #594536 !important;
+    background-color: #FAF8F0;
+    border-color: #C6A04A;
+}
+
+#confirmacion input::placeholder {
+    color: #8B806F !important;
+}
+
+/* CONTADORES */
+#confirmacion .contador-personas span {
+    color: #594536 !important;
+}
+
+#confirmacion .contador-personas button {
+    color: #FAF8F0 !important;
+    background-color: #A8B86A;
+}
+
+/* BOTON WHATSAPP */
+#confirmarWhatsapp {
+    color: #FAF8F0 !important;
+    background-color: #594536;
+    border-color: #C6A04A;
+}
+
+/* =========================================
+   CIERRE DE LA INVITACIÓN
+========================================= */
+
+/* SUBTITULO */
+#cierre .cierre-subtitulo {
+    color: #A8B86A !important;
+}
+
+/* ADORNO */
+#cierre .cierre-adorno {
+    color: #C6A04A !important;
+}
+
+/* FRASE PRINCIPAL */
+#cierre .cierre-contenido h2 {
+    color: #594536 !important;
+}
+
+/* PARRAFO */
+#cierre .cierre-contenido p {
+    color: #594536 !important;
+}
+
+/* LINEA DECORATIVA */
+#cierre .cierre-linea {
+    background-color: #C6A04A !important;
+}
+
+/* FIRMA */
+#cierre .cierre-firma {
+    color: #A8B86A !important;
+}
+
+/* NOMBRES DE LOS NOVIOS */
+#cierre #nombreCierre {
+    color: #594536 !important;
+}
+
+/* MARCO OVALADO DE LA FOTOGRAFÍA */
+.foto-portada {
+    width: 260px;
+    height: 340px;
+    margin: 25px auto;
+    padding: 7px;
+    position: relative;
+    border-radius: 50%;
+    background: #FAF8F0;
+    border: 2px solid #C6A04A;
+    box-shadow:
+        0 0 0 3px #FAF8F0,
+        0 0 0 5px #C6A04A,
+        0 8px 22px rgba(0, 0, 0, 0.15);
+}
+
+.foto-portada img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 1px solid #C6A04A;
+}
+
+/* MARCO ELEGANTE PARA LAS SECCIONES */
+#nombresNovios {
+    position: relative;
+    margin: 25px 15px;
+    padding: 35px 15px;
+    border: 2px solid #C6A04A;
+    outline: 1px solid #C6A04A;
+    outline-offset: 5px;
+    border-radius: 2px;
+    background: #FAF8F0;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* MARCO DORADO PARA LAS SECCIONES */
+#nombresNovios,
+#recepcion {
+    position: relative;
+    margin: 30px 15px;
+    padding: 35px 15px;
+
+    border: 2px solid #C6A04A;
+    outline: 1px solid #C6A04A;
+    outline-offset: 5px;
+
+    border-radius: 2px;
+    background: #FAF8F0;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* MARCO DORADO PARA LAS SECCIONES */
+#nombresNovios,
+#recepcion,
+#historia {
+    position: relative;
+    margin: 30px 15px;
+    padding: 35px 15px;
+
+    border: 2px solid #C6A04A;
+    outline: 1px solid #C6A04A;
+    outline-offset: 5px;
+
+    border-radius: 2px;
+    background: #FAF8F0;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* MARCO DORADO PARA LAS SECCIONES */
+#nombresNovios,
+#recepcion,
+#historia,
+#papas {
+    position: relative;
+    margin: 30px 15px;
+    padding: 35px 15px;
+
+    border: 2px solid #C6A04A;
+    outline: 1px solid #C6A04A;
+    outline-offset: 5px;
+
+    border-radius: 2px;
+    background: #FAF8F0;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* MARCO DORADO PARA LAS SECCIONES */
+#nombresNovios,
+#recepcion,
+#historia,
+#papas,
+#regalos {
+    position: relative;
+    margin: 30px 15px;
+    padding: 35px 15px;
+
+    border: 2px solid #C6A04A;
+    outline: 1px solid #C6A04A;
+    outline-offset: 5px;
+
+    border-radius: 2px;
+    background: #FAF8F0;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================================
+   MARCO DORADO PARA LAS SECCIONES
+========================================= */
+
+#nombresNovios,
+#recepcion,
+#historia,
+#papas,
+#regalos,
+#agenda {
+    position: relative;
+    margin: 30px 15px;
+    padding: 35px 15px;
+
+    border: 2px solid #C6A04A;
+    outline: 1px solid #C6A04A;
+    outline-offset: 5px;
+
+    border-radius: 2px;
+    background: #FAF8F0;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================================
+   MARCO DORADO PARA LAS SECCIONES
+========================================= */
+
+#nombresNovios,
+#recepcion,
+#historia,
+#papas,
+#regalos,
+#agenda,
+#confirmacion {
+    position: relative;
+    margin: 30px 15px;
+    padding: 35px 15px;
+
+    border: 2px solid #C6A04A;
+    outline: 1px solid #C6A04A;
+    outline-offset: 5px;
+
+    border-radius: 2px;
+    background: #FAF8F0;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================================
+   MARCO DORADO PARA LAS SECCIONES
+========================================= */
+
+#nombresNovios,
+#recepcion,
+#historia,
+#papas,
+#regalos,
+#agenda,
+#confirmacion,
+#cierre {
+    position: relative;
+    margin: 30px 15px;
+    padding: 35px 15px;
+
+    border: 2px solid #C6A04A;
+    outline: 1px solid #C6A04A;
+    outline-offset: 5px;
+
+    border-radius: 2px;
+    background: #FAF8F0;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================================
+   RECUADROS DE LA AGENDA - VERDE MANZANA
+========================================= */
+
+#agenda .timeline .timeline-item {
+    background: #A8B86A;
+    border: 1px solid #879A50;
+    border-radius: 10px;
+}
+
+/* FORZAR TAMAÑO DEL BOTÓN DE MÚSICA */
+.hero .boton-musica-portada {
+    display: inline-block !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: fit-content !important;
+
+    padding: 5px 10px !important;
+    margin: 15px auto 0 !important;
+
+    font-size: 8px !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.5px !important;
+
+    border-radius: 20px !important;
+}
+
+/* AJUSTE DE AGENDA PARA CELULARES */
+@media (max-width: 600px) {
+
+    #agenda {
+        padding: 70px 12px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .timeline {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .evento {
+        grid-template-columns: 65px minmax(0, 1fr);
+        column-gap: 12px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .timeline::before {
+        left: 75px;
+    }
+
+    .hora {
+        width: auto;
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .contenido {
+        min-width: 0;
+        padding: 15px 12px;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+    }
+
+    .contenido h3 {
+        font-size: 16px;
+    }
+
+    .contenido p {
+        font-size: 13px;
+    }
+}
+
+/* RAMO FLORAL SOBRE EL OVALO */
+.ramo-portada {
+    display: block;
+    position: relative;
+    z-index: 10;
+
+    width: 300px;
+    max-width: 90%;
+    height: auto;
+
+    margin: 0 auto;
+    transform: translateY(-65px);
+
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    .ramo-portada {
+        width: 260px;
+       margin-top: -85px;
+    }
+}
+
+/* CONTENEDOR DE FOTO Y RAMO */
+.foto-con-ramo {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 25px auto 65px;
+}
+
+/* FOTOGRAFÍA OVALADA */
+.foto-portada {
+    position: relative;
+    z-index: 1;
+}
+
+/* RAMO FLORAL INCLINADO */
+.foto-con-ramo .ramo-portada {
+    position: absolute;
+    z-index: 5;
+
+    width: 220px;
+    max-width: 75%;
+    height: auto;
+
+    bottom: -70px;
+    left: 41%;
+
+    transform: translateX(-50%) rotate(-12deg);
+
+    margin: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 600px) {
+    .foto-con-ramo .ramo-portada {
+        width: 195px;
+        max-width: 75%;
+        bottom: -53px;
+        transform: translateX(-50%) rotate(-12deg);
+    }
+}
+
+/* CENTRAR INVITACIÓN EN CELULARES */
+@media (max-width: 600px) {
+
+    .hero {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .hero-contenido {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        left: auto;
+        right: auto;
+        transform: none;
+        align-items: center;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero-contenido {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .foto-con-ramo .ramo-portada {
+        left: 45%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .hero-contenido {
+        position: relative;
+        left: 5px;
+    }
 }

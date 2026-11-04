@@ -25,99 +25,121 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <body>
 
+
 <section class="hero">
 
-    <!-- CARRUSEL -->
-    <div class="hero-slider">
+    <!-- MARCO DECORATIVO DE LA PORTADA -->
+    <div class="marco-portada">
 
-        <div class="hero-slide active"
-             style="background-image: url('portada/portada1.jpg');">
-        </div>
-
-        <div class="hero-slide"
-             style="background-image: url('portada/portada2.jpg');">
-        </div>
-
-        <div class="hero-slide"
-             style="background-image: url('portada/portada3.jpg');">
-        </div>
+        <span class="esquina-marco superior-izquierda"></span>
+        <span class="esquina-marco superior-derecha"></span>
+        <span class="esquina-marco inferior-izquierda"></span>
+        <span class="esquina-marco inferior-derecha"></span>
 
     </div>
 
     <!-- CONTENIDO DE LA PORTADA -->
-  <div class="hero-contenido">
+    <div class="hero-contenido">
 
-    <h1 id="tipoEvento"></h1>
+        <p class="etiqueta-boda">NUESTRA BODA</p>
 
-    <h2 id="nombreEvento"></h2>
+        <h2 id="nombreEvento">Abe & Jess</h2>
 
-    <p id="fraseEvento"></p>
+        <div class="adorno-portada"></div>
 
-    <button class="boton-musica-portada" id="musica">
-        <i class="fa-solid fa-music"></i>
-        <span>REPRODUCIR MI CANCIÓN</span>
-    </button>
+       <!-- FOTOGRAFÍA Y RAMO DECORATIVO -->
+<div class="foto-con-ramo">
 
-    <a href="#contador" id="btnInvitacion">
-        Ver invitación
-    </a>
+    <div class="foto-portada">
+        <img src="portada/abe-jess.jpg" alt="Abe y Jess">
+    </div>
 
-</div> 
+    <img src="assets/ramo-verde.png"
+         class="ramo-portada"
+         alt="">
+
+</div>
+
+        <!-- CONTADOR -->
+        <div class="contador-portada">
+
+            <p class="fecha-portada">
+                27 DE DICIEMBRE DE 2026
+            </p>
+
+            <h3>Faltan</h3>
+
+            <div class="contador">
+
+                <div class="tiempo">
+                    <span id="dias">00</span>
+                    <small>Días</small>
+                </div>
+
+                <div class="tiempo">
+                    <span id="horas">00</span>
+                    <small>Horas</small>
+                </div>
+
+                <div class="tiempo">
+                    <span id="minutos">00</span>
+                    <small>Minutos</small>
+                </div>
+
+                <div class="tiempo">
+                    <span id="segundos">00</span>
+                    <small>Segundos</small>
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="boton-musica-portada" id="musica">
+            <i class="fa-solid fa-music"></i>
+            <span>REPRODUCIR NUESTRA CANCIÓN</span>
+        </button>
+
+        <a href="#nombresNovios" id="btnInvitacion">
+            Ver invitación
+        </a>
+
+    </div>
 
 </section>
 
-<section id="contador">
+<!-- =========================================
+     NOMBRES DE LOS NOVIOS
+========================================= -->
 
-    <!-- FLORES DECORATIVAS -->
-    <img src="assets/florales/flor1.png"
-         class="flor-decorativa flor-superior"
-         alt="">
+<section id="nombresNovios" data-aos="fade-up">
 
-    <img src="assets/florales/flor2.png"
-         class="flor-decorativa flor-inferior"
-         alt="">
+    <div class="titulo-seccion">
 
-    <div class="fecha-decorada">
-        <span></span>
-        <p>26 DE DICIEMBRE DE 2026</p>
-        <span></span>
-    </div>
+        <span>UNIDOS POR EL AMOR</span>
 
-    <h2>Faltan</h2>
+        <h2 id="nombresCompletos"></h2>
 
-    <div class="contador">
-
-        <div class="tiempo">
-            <span id="dias">00</span>
-            <small>Días</small>
+        <div class="regalos-separador">
+            ✦
         </div>
 
-        <div class="tiempo">
-            <span id="horas">00</span>
-            <small>Horas</small>
-        </div>
+        <p id="fraseNombres"></p>
 
-        <div class="tiempo">
-            <span id="minutos">00</span>
-            <small>Minutos</small>
-        </div>
-
-        <div class="tiempo">
-            <span id="segundos">00</span>
-            <small>Segundos</small>
-        </div>
+        <span>27 DE DICIEMBRE DE 2026</span>
 
     </div>
 
 </section>
+
 
 <section id="recepcion" data-aos="fade-left">
 
     <div class="titulo-seccion">
 
-        <span>CELEBRAMOS</span>
+        <span>EL GRAN DÍA</span>
 
-        <h2>La Recepción</h2>
+        <h2>La celebración</h2>
 
     </div>
 
@@ -129,132 +151,53 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
         <h3 id="salonEvento"></h3>
 
-<p id="horaRecepcion"></p>
+        <p id="horaRecepcion"></p>
 
-<p>Será un honor contar con su presencia.</p>
+        <p>
+            Queremos compartir contigo la alegría de este día
+            tan especial en nuestras vidas.
+        </p>
 
         <a href="#" class="btn-evento" id="btnMapaRecepcion">
-    Cómo llegar
-</a>
+            Cómo llegar
+        </a>
 
     </div>
 
 </section>
 
 <!-- =========================================
-     MI HISTORIA
+     NUESTRA HISTORIA
 ========================================= -->
 
 <section id="historia" data-aos="fade-up">
 
     <div class="titulo-seccion">
 
-        <span>QUINCE AÑOS DE RECUERDOS</span>
+        <span>UNA HISTORIA DE AMOR</span>
 
-        <h2>Mi historia</h2>
+        <h2>Nuestra historia</h2>
+
+        <div class="regalos-separador">
+            ✦
+        </div>
+
+        <h3 id="tituloNacimiento">
+            Dos corazones, un mismo camino
+        </h3>
+
+        <p id="textoNacimiento"></p>
+
+        <div class="regalos-separador">
+            ✦
+        </div>
+
+        <h3>Y nuestra historia continúa...</h3>
 
         <p>
-            Un viaje lleno de momentos, sonrisas y sueños...
+            Hoy queremos celebrar este amor rodeados de las
+            personas que forman parte de nuestras vidas.
         </p>
-
-    </div>
-
-    <div class="historia-contenedor">
-
-        <!-- NACIMIENTO -->
-
-        <div class="historia-item">
-
-            <div class="historia-imagen">
-
-                <div class="historia-galeria" id="galeriaNacimiento"></div>
-
-            </div>
-
-            <div class="historia-texto">
-
-                <span>EL COMIENZO</span>
-
-                <h3 id="tituloNacimiento">Mi nacimiento</h3>
-
-                <p id="textoNacimiento">
-                    Un comienzo lleno de esperanza.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- INFANCIA -->
-
-        <div class="historia-item historia-reversa">
-
-            <div class="historia-imagen">
-
-                <div class="historia-galeria" id="galeriaInfancia"></div>
-
-            </div>
-
-            <div class="historia-texto">
-
-                <span>RECUERDOS</span>
-
-                <h3 id="tituloInfancia">Mi infancia</h3>
-
-                <p id="textoInfancia">
-                    Los primeros capítulos de mi historia.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- XV AÑOS -->
-
-        <div class="historia-item">
-
-            <div class="historia-imagen">
-
-                <img
-                    src="historia/xv.jpg"
-                    alt="Elena en sus XV años"
-                >
-
-            </div>
-
-            <div class="historia-texto">
-
-                <span>HOY</span>
-
-                <h3>Mis XV años</h3>
-
-                <p>
-                    Hoy celebro una etapa muy especial de mi vida,
-                    agradecida por cada momento vivido y emocionada
-                    por todos los sueños que están por comenzar.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- FINAL -->
-
-        <div class="historia-final">
-
-            <span>UN NUEVO CAPÍTULO</span>
-
-            <h3>Y mi historia continúa...</h3>
-
-            <p>
-                Gracias por acompañarme y ser parte de este
-                momento tan importante de mi vida.
-            </p>
-
-        </div>
 
     </div>
 
@@ -282,33 +225,56 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
     </div>
 
-    <div class="familia-card">
+   <div class="familia-card">
 
-        <div class="familia-bloque">
+    <!-- PADRES DE LA NOVIA -->
 
-            <span class="familia-subtitulo">MIS PADRES</span>
+    <div class="familia-bloque">
 
-            <h3>Sr. Belizario López Gómez</h3>
-            <h3>Sra. Madiley Pérez Cordero</h3>
+        <span class="familia-subtitulo">
+            PADRES DE LA NOVIA
+        </span>
 
-            <p>
-                Gracias por ser mi guía, mi fortaleza y por acompañarme
-                con amor en cada etapa de mi vida.
-            </p>
-
-        </div>
-
-        <div class="familia-separador">
-            ✦
-        </div>
+        <h3 id="padreNovia"></h3>
+        <h3 id="madreNovia"></h3>
 
     </div>
+
+    <div class="familia-separador">
+        ✦
+    </div>
+
+    <!-- PADRES DEL NOVIO -->
+
+    <div class="familia-bloque">
+
+        <span class="familia-subtitulo">
+            PADRES DEL NOVIO
+        </span>
+
+        <h3 id="padreNovio"></h3>
+        <h3 id="madreNovio"></h3>
+
+    </div>
+
+    <div class="familia-separador">
+        ✦
+    </div>
+
+    <p>
+        Gracias por su amor, sus enseñanzas y por acompañarnos
+        en este camino tan especial.
+    </p>
+
+</div>
 
     <div id="seccionSoloPadrinos">
 
     <div class="titulo-seccion">
 
-        <h2>Mis padrinos</h2>
+        <span>PERSONAS ESPECIALES</span>
+
+        <h2>Nuestros padrinos</h2>
 
         <div id="listaPadrinos"></div>
 
@@ -321,7 +287,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 </section>
 
 <!-- =========================================
-     UN DETALLE PARA ELENA
+     DETALLES PARA LOS NOVIOS
 ========================================= -->
 
 <section id="regalos" data-aos="fade-up">
@@ -330,7 +296,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
         <span>UN DETALLE ESPECIAL</span>
 
-        <h2>Un detalle para Elena</h2>
+        <h2>Un detalle para los novios</h2>
 
     </div>
 
@@ -340,14 +306,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             <i class="fa-solid fa-gift"></i>
         </div>
 
-        <p>
-            Tu presencia es el regalo más especial en este día.
+                <p>
+            El regalo más valioso para nosotros es contar
+            con tu presencia en este día tan especial.
         </p>
 
         <p>
-            Si deseas tener un detalle con Elena, agradeceremos
-            mucho tus buenos deseos y, de manera opcional, podrás
-            acompañarlos con un detalle en un sobre.
+            Si deseas tener un detalle con nosotros, será
+            recibido con mucho cariño. Tu obsequio es libre,
+            lo que nazca de tu corazón será bienvenido.
         </p>
 
         <div class="regalos-separador">
@@ -355,8 +322,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         </div>
 
         <p class="regalos-final">
-            Con cariño, gracias por ser parte de este momento
-            tan importante.
+            Gracias por acompañarnos y ser parte de nuestra historia.
         </p>
 
     </div>
@@ -389,23 +355,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 </section>
 
 <!-- =========================================
-     GALERÍA
-========================================= -->
-
-<section id="galeria" data-aos="zoom-in">
-
-    <div class="titulo-seccion">
-
-        <span>MOMENTOS ESPECIALES</span>
-        <h2>Galería</h2>
-
-    </div>
-
-    <div class="grid-galeria" id="gridGaleria"></div>
-
-</section>
-
-<!-- =========================================
      CONFIRMACIÓN DE ASISTENCIA
 ========================================= -->
 
@@ -422,7 +371,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
     <div class="titulo-seccion">
 
-        <span>CONFIRMACIÓN</span>
+        <span>CONFIRMA TU ASISTENCIA</span>
 
         <h2>¿Nos acompañarás?</h2>
 
@@ -431,13 +380,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     <div class="card-confirmacion">
 
         <p>
-            Nos encantará compartir este momento contigo.
+            Será una alegría compartir contigo este día tan
+            especial. Por favor, ayúdanos confirmando tu asistencia.
         </p>
 
         <input
             type="text"
             id="nombreInvitado"
-            placeholder="Escribe tu nombre"
+            placeholder="Nombre de quien confirma"
         >
 
         <label>Adultos</label>
@@ -480,10 +430,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
     <div class="cierre-contenido">
 
-       <img id="fotoDespedida" src="" alt="Elena"> 
-
         <span class="cierre-subtitulo">
-            GRACIAS POR ACOMPAÑARME
+            GRACIAS POR ACOMPAÑARNOS
         </span>
 
         <div class="cierre-adorno">
@@ -491,24 +439,24 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         </div>
 
         <h2>
-            Un momento para recordar,
-            una historia para celebrar.
+            Un día para celebrar,
+            una vida para compartir.
         </h2>
 
         <p>
-            Gracias por compartir conmigo este día tan especial
-            y por formar parte de los recuerdos que llevaré
-            siempre en mi corazón.
+            Gracias por acompañarnos en este día tan especial
+            y por formar parte de los recuerdos que construiremos
+            juntos. Nos alegra compartir nuestra felicidad contigo.
         </p>
 
         <div class="cierre-linea"></div>
 
         <span class="cierre-firma">
-            Con cariño, Elena
+            Con cariño,
         </span>
 
         <h3 id="nombreCierre">
-            
+            Abe & Jess
         </h3>
 
     </div>
@@ -519,38 +467,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 </section>
 
-<div class="menu-flotante">
-
-    
-
-    <button class="fab" id="ubicacion">
-        <i class="fa-solid fa-location-dot"></i>
-    </button>
-
-<button class="fab" id="whatsapp">
-    <i class="fa-brands fa-whatsapp"></i>
-</button>
-
-</div>
-
-<audio id="musicaFondo" loop>
-    <source src="music/cancion.mp3" type="audio/mpeg">
-</audio>
-
-<div id="lightbox">
-
-    <span id="cerrar">&times;</span>
-
-    <img id="imagenGrande">
-
-</div>
+<audio id="musicaFondo" loop></audio>
 
 <script src="js/config.js"></script>
-
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="js/script.js"></script>
 
 </body>
-
 </html>
-
